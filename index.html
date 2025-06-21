@@ -29,7 +29,7 @@
             height: 100%;
             display: none;
             padding: 40px;
-            align-items: center;
+            align-items: flex-start;
             justify-content: flex-start;
             flex-direction: column;
             text-align: center;
@@ -46,15 +46,14 @@
         }
 
         h1 {
-            font-size: 3.2em;
+            font-size: 2.8em;
             color: #1a3d0a;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(26, 61, 10, 0.1);
             animation: slideInDown 0.8s ease-out;
         }
 
         h2 {
-            font-size: 2.4em;
+            font-size: 2.2em;
             color: #1a3d0a;
             margin-bottom: 30px;
             animation: slideInDown 0.8s ease-out 0.2s both;
@@ -67,15 +66,8 @@
             animation: slideInDown 0.8s ease-out 0.3s both;
         }
 
-        h4 {
-            font-size: 1.4em;
-            color: #2d5016;
-            margin-bottom: 15px;
-            font-weight: bold;
-        }
-
         .subtitle {
-            font-size: 1.3em;
+            font-size: 1.2em;
             color: #4a7c59;
             margin-bottom: 30px;
             font-style: italic;
@@ -83,32 +75,30 @@
         }
 
         .vision-quote {
-            font-size: 1.4em;
+            font-size: 1.3em;
             color: #1a3d0a;
             font-weight: bold;
-            background: rgba(255, 255, 255, 0.3);
-            padding: 25px;
-            border-radius: 15px;
-            border-left: 5px solid #4a7c59;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #4a7c59;
             margin: 20px 0;
             animation: fadeInUp 0.8s ease-out 0.5s both;
-            max-width: 900px;
         }
 
         ul {
             list-style: none;
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
-            width: 100%;
         }
 
         li {
             font-size: 1.1em;
-            margin: 12px 0;
+            margin: 15px 0;
             padding: 12px 20px;
-            background: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.6);
             border-radius: 8px;
-            border-left: 4px solid #4a7c59;
+            border-left: 3px solid #4a7c59;
             text-align: left;
             opacity: 0;
             transform: translateY(30px);
@@ -121,8 +111,6 @@
         li:nth-child(4) { animation-delay: 0.9s; }
         li:nth-child(5) { animation-delay: 1.0s; }
         li:nth-child(6) { animation-delay: 1.1s; }
-        li:nth-child(7) { animation-delay: 1.2s; }
-        li:nth-child(8) { animation-delay: 1.3s; }
 
         .emoji {
             font-size: 1.2em;
@@ -132,9 +120,9 @@
         .placeholder {
             width: 350px;
             height: 250px;
-            background: rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.7);
             border: 2px dashed #4a7c59;
-            border-radius: 10px;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -142,8 +130,6 @@
             color: #4a7c59;
             font-size: 1em;
             animation: fadeInUp 0.8s ease-out 0.8s both;
-            text-align: center;
-            padding: 15px;
         }
 
         .navigation {
@@ -235,17 +221,8 @@
         .two-column {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            max-width: 1000px;
-            margin: 0 auto;
-            align-items: start;
-        }
-
-        .three-column {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 30px;
-            max-width: 1000px;
+            gap: 50px;
+            max-width: 1200px;
             margin: 0 auto;
             align-items: start;
         }
@@ -259,446 +236,362 @@
         .completed { color: #28a745; }
         .in-progress { color: #ffc107; }
         .planned { color: #6c757d; }
-
-        .phase-box {
-            background: rgba(255, 255, 255, 0.3);
-            padding: 20px;
-            border-radius: 10px;
-            margin: 15px 0;
-            border-left: 4px solid #4a7c59;
-        }
-
-        .revenue-item {
-            background: rgba(255, 255, 255, 0.4);
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            border-left: 4px solid #4a7c59;
-        }
-
-        .contact-info {
-            margin-top: 30px;
-            font-size: 1.1em;
-            color: #2d5016;
-        }
-
-        .slide-content {
-            max-width: 1000px;
-            width: 100%;
-        }
     </style>
 </head>
 <body>
     <div class="presentation">
-        <div class="progress-bar" id="progressBar"></div>
-        <div class="slide-counter" id="slideCounter">1 / 20</div>
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="slide-counter" id="slideCounter">1 / 18</div>
 
-        <!-- Slide 1: Title -->
-        <div class="slide active">
-            <h1>Smart Regenerative Farm</h1>
-            <p class="subtitle">Where Heritage Meets Innovation</p>
-            <p class="vision-quote">"Transforming agriculture through the fusion of heirloom varieties, regenerative practices, and cutting-edge technology"</p>
+    <!-- Slide 1: Title -->
+    <div class="slide active">
+        <h1>Smart Regenerative Farm</h1>
+        <p class="subtitle">Where Heritage Meets Innovation</p>
+        <p class="vision-quote">"Transforming agriculture through the fusion of heirloom varieties, regenerative practices, and cutting-edge technology"</p>
+    </div>
+
+    <!-- Slide 2: Vision -->
+    <div class="slide">
+        <h2>Our Vision</h2>
+        <div class="vision-quote">
+            "To preserve agricultural heritage while pioneering the future of farming through the thoughtful integration of heirloom varieties, ecological principles, and appropriate technology."
         </div>
+        <p class="subtitle">Creating a world where quirky, colorful heirloom vegetables meet smart farming technology to regenerate ecosystems while producing extraordinary food.</p>
+    </div>
 
-        <!-- Slide 2: Vision -->
-        <div class="slide">
-            <h2>Our Vision</h2>
-            <div class="vision-quote">
-                "To preserve agricultural heritage while pioneering the future of farming through the thoughtful integration of heirloom varieties, ecological principles, and appropriate technology."
-            </div>
-            <p class="subtitle">Creating a world where quirky, colorful heirloom vegetables meet smart farming technology to regenerate ecosystems while producing extraordinary food.</p>
+    <!-- Slide 3: Living Laboratory Model -->
+    <div class="slide">
+        <h2>The Living Laboratory Model</h2>
+        <h3>Current Research Phase (Months 1-24)</h3>
+        <p class="subtitle">What We're Building Right Now:</p>
+        <ul>
+            <li><span class="emoji">🌱</span><strong>Heirloom Variety Testing:</strong> Partnership with Kokopelli (Europe's leading heirloom seed bank)</li>
+            <li><span class="emoji">🤖</span><strong>Technology Stack Development:</strong> Building AI models for crop monitoring and prediction</li>
+            <li><span class="emoji">👥</span><strong>Community Network Building:</strong> Establishing network of local farm workers (primarily elder women)</li>
+        </ul>
+    </div>
+
+    <!-- Slide 4: The Problem -->
+    <div class="slide">
+        <h2>The Problem We're Solving</h2>
+        <h3>Agriculture's Critical Challenges</h3>
+        <ul>
+            <li><span class="emoji">🧬</span><strong>Genetic Erosion:</strong> 75% of agricultural diversity lost in the last century</li>
+            <li><span class="emoji">🌍</span><strong>Environmental Degradation:</strong> Conventional farming depleting soil and water resources</li>
+            <li><span class="emoji">👥</span><strong>Rural Unemployment:</strong> Limited opportunities for rural communities, especially women</li>
+            <li><span class="emoji">⚡</span><strong>Technology Gap:</strong> Sustainable farming lacks integrated, accessible technology solutions</li>
+            <li><span class="emoji">🥕</span><strong>Market Homogenization:</strong> Consumers losing access to diverse, flavorful varieties</li>
+        </ul>
+        <div class="opportunity-section">
+            <h3>The Opportunity</h3>
+            <p class="subtitle">Bridging the gap between heritage preservation and technological innovation while creating meaningful rural employment</p>
         </div>
+    </div>
 
-        <!-- Slide 3: Living Laboratory Model -->
-        <div class="slide">
-            <h2>The Living Laboratory Model</h2>
-            <h3>Current Research Phase (Months 1-24)</h3>
-            <p class="subtitle">What We're Building Right Now:</p>
+    <!-- Slide 5: Our Solution -->
+    <div class="slide">
+        <h2>Our Integrated Solution</h2>
+        <h3>The Three Pillars</h3>
+        <ul>
+            <li><span class="emoji">🌿</span><strong>Heritage Preservation:</strong> Cultivating rare and endangered heirloom varieties</li>
+            <li><span class="emoji">🔬</span><strong>Technology Innovation:</strong> Smart monitoring systems for optimal growing conditions</li>
+            <li><span class="emoji">👥</span><strong>Community Empowerment:</strong> Providing dignified employment for rural women</li>
+        </ul>
+    </div>
+
+    <!-- Slide 6: Current R&D -->
+    <div class="slide">
+        <h2>Current Research & Development</h2>
+        <h3>Phase 1: Foundation Building (Years 1-2) - IN PROGRESS</h3>
+        <div class="rd-section">
+            <h4>Farm Operations (0.3 Hectare Pilot Zone)</h4>
             <ul>
-                <li><span class="emoji">🌱</span><strong>Heirloom Variety Testing:</strong> Partnership with Kokopelli (Europe's leading heirloom seed bank) - Testing unique varieties with unusual colors, shapes, and flavors</li>
-                <li><span class="emoji">🤖</span><strong>Technology Stack Development:</strong> Building AI models for crop monitoring, sensor networks, and MVP farm management dashboard</li>
-                <li><span class="emoji">👥</span><strong>Community Network Building:</strong> Establishing network of local farm workers (primarily elder women) and creating sustainable employment</li>
+                <li><span class="status-indicator completed">✅</span>Partnership established with Kokopelli seed bank</li>
+                <li><span class="status-indicator in-progress">🔄</span>Testing 50+ heirloom varieties with unique characteristics</li>
+                <li><span class="status-indicator in-progress">🔄</span>Implementing regenerative farming practices</li>
+                <li><span class="status-indicator in-progress">🔄</span>Building network of local farm workers (focus on elder women)</li>
+                <li><span class="status-indicator planned">📋</span>Documenting variety performance and market feedback</li>
             </ul>
         </div>
-
-        <!-- Slide 4: The Problem -->
-        <div class="slide">
-            <h2>The Problem We're Solving</h2>
-            <h3>Agriculture's Critical Challenges</h3>
+        <div class="rd-section">
+            <h4>Technology Development</h4>
             <ul>
-                <li><span class="emoji">🧬</span><strong>Genetic Erosion:</strong> 75% of agricultural diversity lost in the last century</li>
-                <li><span class="emoji">🌍</span><strong>Environmental Degradation:</strong> Conventional farming depleting soil and water resources</li>
-                <li><span class="emoji">👥</span><strong>Rural Unemployment:</strong> Limited opportunities for rural communities, especially women</li>
-                <li><span class="emoji">⚡</span><strong>Technology Gap:</strong> Sustainable farming lacks integrated, accessible technology solutions</li>
-                <li><span class="emoji">🥕</span><strong>Market Homogenization:</strong> Consumers losing access to diverse, flavorful varieties</li>
-            </ul>
-            <p class="subtitle">The Opportunity: Bridging the gap between heritage preservation and technological innovation while creating meaningful rural employment</p>
-        </div>
-
-        <!-- Slide 5: Our Solution -->
-        <div class="slide">
-            <h2>Our Integrated Solution</h2>
-            <h3>The Three Pillars</h3>
-            <ul>
-                <li><span class="emoji">🌿</span><strong>Heritage Preservation:</strong> Cultivating rare and endangered heirloom varieties, preserving genetic diversity and traditional knowledge, creating market demand for unique produce</li>
-                <li><span class="emoji">🔬</span><strong>Technology Innovation:</strong> Smart monitoring systems for optimal growing conditions, AI-driven insights for sustainable farming, data collection to validate regenerative methods</li>
-                <li><span class="emoji">👥</span><strong>Community Empowerment:</strong> Providing dignified employment for rural women, knowledge transfer between generations, building resilient local food systems</li>
+                <li><span class="status-indicator in-progress">🔄</span>Developing AI models for crop monitoring</li>
+                <li><span class="status-indicator in-progress">🔄</span>Testing sensor networks and IoT devices</li>
+                <li><span class="status-indicator in-progress">🔄</span>Building MVP farm management dashboard</li>
+                <li><span class="status-indicator in-progress">🔄</span>Creating data collection and analysis systems</li>
+                <li><span class="status-indicator planned">📋</span>Integrating real-world farm data with AI algorithms</li>
             </ul>
         </div>
+    </div>
 
-        <!-- Slide 6: Current R&D Phase 1 -->
-        <div class="slide">
-            <h2>Current Research & Development</h2>
-            <h3>Phase 1: Foundation Building (Years 1-2) - IN PROGRESS</h3>
-            <div class="two-column">
-                <div>
-                    <h4>Farm Operations (0.3 Hectare Pilot Zone)</h4>
-                    <ul>
-                        <li><span class="status-indicator completed">✅</span>Partnership established with Kokopelli seed bank</li>
-                        <li><span class="status-indicator in-progress">🔄</span>Testing 50+ heirloom varieties with unique characteristics</li>
-                        <li><span class="status-indicator in-progress">🔄</span>Implementing regenerative farming practices</li>
-                        <li><span class="status-indicator in-progress">🔄</span>Building network of local farm workers (focus on elder women)</li>
-                        <li><span class="status-indicator planned">📋</span>Documenting variety performance and market feedback</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Technology & Community Development</h4>
-                    <ul>
-                        <li><span class="status-indicator in-progress">🔄</span>Developing AI models for crop monitoring</li>
-                        <li><span class="status-indicator in-progress">🔄</span>Testing sensor networks and IoT devices</li>
-                        <li><span class="status-indicator in-progress">🔄</span>Building MVP farm management dashboard</li>
-                        <li><span class="status-indicator completed">✅</span>Establishing relationships with local workers</li>
-                        <li><span class="status-indicator in-progress">🔄</span>Creating training programs for sustainable farming</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 7: Extended Roadmap Phase 2 -->
-        <div class="slide">
-            <h2>Extended Implementation Roadmap</h2>
+    <!-- Slide 7: Extended Roadmap -->
+    <div class="slide">
+        <h2>Extended Implementation Roadmap</h2>
+        <div class="roadmap-phase">
             <h3>Phase 2: Scaling & Refinement (Years 3-4)</h3>
-            <div class="two-column">
-                <div>
-                    <h4>Farm Expansion</h4>
-                    <ul>
-                        <li>Scale to 20-30% of total land (0.6-0.8 hectares)</li>
-                        <li>Introduce livestock integration (chickens, bees)</li>
-                        <li>Expand heirloom variety collection</li>
-                        <li>Establish seed saving and distribution program</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Technology & Community Growth</h4>
-                    <ul>
-                        <li>Launch full farm management platform</li>
-                        <li>Add predictive analytics capabilities</li>
-                        <li>Expand worker network to 15-20 people</li>
-                        <li>Create mentorship programs</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 8: Phase 3 -->
-        <div class="slide">
-            <h2>Phase 3: Full Transition & Replication (Years 5-6)</h2>
-            <div class="two-column">
-                <div>
-                    <h4>Complete Farm Transformation</h4>
-                    <ul>
-                        <li>100% regenerative farming implementation</li>
-                        <li>Full technology suite deployment</li>
-                        <li>Seed production and distribution hub</li>
-                        <li>Research and education center</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Technology Commercialization</h4>
-                    <ul>
-                        <li>License technology to farms globally</li>
-                        <li>Establish franchise model for replication</li>
-                        <li>Create online learning platform</li>
-                        <li>Develop B2B consulting services</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 9: Business Model Canvas -->
-        <div class="slide">
-            <h2>Business Model Canvas</h2>
-            <h3>Value Propositions</h3>
-            <div class="three-column">
-                <div>
-                    <h4>For Conscious Consumers</h4>
-                    <ul>
-                        <li>Access to rare, flavorful heirloom varieties</li>
-                        <li>Complete transparency in growing methods</li>
-                        <li>Support for heritage preservation</li>
-                        <li>Unique, Instagram-worthy produce with stories</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>For Technology Customers</h4>
-                    <ul>
-                        <li>Validated agricultural technology</li>
-                        <li>Integrated hardware and software solutions</li>
-                        <li>Data-driven insights for sustainable farming</li>
-                        <li>Community-centered implementation model</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>For Rural Communities</h4>
-                    <ul>
-                        <li>Dignified employment opportunities</li>
-                        <li>Skills development in modern farming</li>
-                        <li>Preservation of traditional knowledge</li>
-                        <li>Economic empowerment for women</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 10: Customer Segments -->
-        <div class="slide">
-            <h2>Customer Segments</h2>
-            <div class="two-column">
-                <div>
-                    <h3>Primary Customers</h3>
-                    <ul>
-                        <li><span class="emoji">🛒</span><strong>Eco-conscious consumers</strong> seeking unique produce</li>
-                        <li><span class="emoji">🍽️</span><strong>High-end restaurants</strong> valuing distinctive ingredients</li>
-                        <li><span class="emoji">🎓</span><strong>Educational institutions</strong> promoting agricultural diversity</li>
-                        <li><span class="emoji">🚜</span><strong>Progressive farmers</strong> transitioning to sustainable practices</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Secondary Customers</h3>
-                    <ul>
-                        <li><span class="emoji">⚡</span><strong>Agricultural technology companies</strong> seeking validation</li>
-                        <li><span class="emoji">🌍</span><strong>Development organizations</strong> supporting rural communities</li>
-                        <li><span class="emoji">🌱</span><strong>Seed companies</strong> interested in heirloom varieties</li>
-                        <li><span class="emoji">🗺️</span><strong>Tourism operators</strong> offering agritourism experiences</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 11: Key Partnerships -->
-        <div class="slide">
-            <h2>Key Partnerships</h2>
-            <div class="two-column">
-                <div>
-                    <h3>Strategic Alliances</h3>
-                    <ul>
-                        <li><span class="emoji">🌱</span><strong>Kokopelli:</strong> Seed supply and variety development</li>
-                        <li><span class="emoji">🤝</span><strong>Local agricultural cooperatives</strong></li>
-                        <li><span class="emoji">👩</span><strong>Women's empowerment organizations</strong></li>
-                        <li><span class="emoji">👨‍🍳</span><strong>Culinary institutes and chef networks</strong></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Technology Partners</h3>
-                    <ul>
-                        <li><span class="emoji">📡</span><strong>IoT sensor manufacturers</strong></li>
-                        <li><span class="emoji">🤖</span><strong>AI/ML development platforms</strong></li>
-                        <li><span class="emoji">🎓</span><strong>Agricultural universities</strong></li>
-                        <li><span class="emoji">📜</span><strong>Sustainability certification bodies</strong></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 12: Revenue Streams -->
-        <div class="slide">
-            <h2>Revenue Streams</h2>
-            <div class="placeholder">
-                [PIE CHART: Revenue distribution - Farm-Based 60%, Technology-Based 30%, Community-Based 10%]
-            </div>
-            <div class="three-column">
-                <div>
-                    <h4>Farm-Based Revenue (60%)</h4>
-                    <ul>
-                        <li>Premium heirloom produce sales</li>
-                        <li>Value-added products</li>
-                        <li>Seeds and seedlings</li>
-                        <li>Farm experiences and education</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Technology-Based Revenue (30%)</h4>
-                    <ul>
-                        <li>Farm management software subscriptions</li>
-                        <li>Hardware sales and leasing</li>
-                        <li>Consulting and training services</li>
-                        <li>Data insights and reports</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Community-Based Revenue (10%)</h4>
-                    <ul>
-                        <li>Training and certification programs</li>
-                        <li>Franchise/licensing fees</li>
-                        <li>Grant funding for social impact</li>
-                        <li>Development partnerships</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 13: Key Resources -->
-        <div class="slide">
-            <h2>Key Resources</h2>
-            <div class="three-column">
-                <div>
-                    <h4>Physical Assets</h4>
-                    <ul>
-                        <li>2.8-hectare demonstration farm</li>
-                        <li>Technology infrastructure (sensors, drones)</li>
-                        <li>Seed library and preservation facilities</li>
-                        <li>Training and meeting spaces</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Intellectual Assets</h4>
-                    <ul>
-                        <li>Proprietary AI algorithms and datasets</li>
-                        <li>Heirloom variety performance database</li>
-                        <li>Sustainable farming methodologies</li>
-                        <li>Community engagement frameworks</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Human Assets</h4>
-                    <ul>
-                        <li>Network of experienced local farm workers</li>
-                        <li>Technical development team</li>
-                        <li>Agricultural and permaculture experts</li>
-                        <li>Community liaisons and trainers</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 14: Social Impact Framework -->
-        <div class="slide">
-            <h2>Social Impact Framework</h2>
-            <div class="three-column">
-                <div>
-                    <h4>Community Empowerment</h4>
-                    <ul>
-                        <li><strong>Employment Creation:</strong> 10-20 rural women</li>
-                        <li><strong>Skills Development:</strong> Modern farming techniques</li>
-                        <li><strong>Knowledge Preservation:</strong> Traditional farming wisdom</li>
-                        <li><strong>Economic Independence:</strong> Financial stability pathways</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Environmental Impact</h4>
-                    <ul>
-                        <li><strong>Biodiversity Conservation:</strong> Rare plant varieties</li>
-                        <li><strong>Soil Regeneration:</strong> Restore soil health</li>
-                        <li><strong>Water Conservation:</strong> Optimized irrigation</li>
-                        <li><strong>Carbon Sequestration:</strong> Soil organic matter</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Cultural Impact</h4>
-                    <ul>
-                        <li><strong>Heritage Preservation:</strong> Agricultural traditions</li>
-                        <li><strong>Food Culture:</strong> Forgotten flavors and varieties</li>
-                        <li><strong>Education:</strong> Sustainable practices</li>
-                        <li><strong>Community Pride:</strong> Local knowledge celebration</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 15: Why This Approach Works -->
-        <div class="slide">
-            <h2>Why This Approach Works</h2>
-            <div class="two-column">
-                <div>
-                    <h3>The Living Laboratory Advantage</h3>
-                    <ul>
-                        <li><span class="emoji">🔬</span><strong>Real-World Validation:</strong> Technology tested in actual farming conditions</li>
-                        <li><span class="emoji">🤝</span><strong>Community Integration:</strong> Solutions developed with and for local communities</li>
-                        <li><span class="emoji">🌿</span><strong>Heritage Focus:</strong> Preserving diversity while embracing innovation</li>
-                        <li><span class="emoji">📈</span><strong>Scalable Model:</strong> Framework adaptable to different regions</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Competitive Advantages</h3>
-                    <ul>
-                        <li><span class="emoji">🎯</span><strong>Unique Positioning:</strong> Heritage preservation + technology innovation</li>
-                        <li><span class="emoji">👥</span><strong>Community-Centered:</strong> Built on relationships and local knowledge</li>
-                        <li><span class="emoji">📊</span><strong>Data-Rich:</strong> Comprehensive dataset from diverse variety testing</li>
-                        <li><span class="emoji">🌍</span><strong>Mission-Driven:</strong> Clear social and environmental impact goals</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 16: Current Milestones -->
-        <div class="slide">
-            <h2>Current Milestones & Next Steps</h2>
-            <div class="three-column">
-                <div>
-                    <h4>Completed (Months 1-3)</h4>
-                    <ul>
-                        <li><span class="status-indicator completed">✅</span>Kokopelli partnership established</li>
-                        <li><span class="status-indicator completed">✅</span>Initial variety selection and testing begun</li>
-                        <li><span class="status-indicator completed">✅</span>Local worker network development started</li>
-                        <li><span class="status-indicator completed">✅</span>Technology architecture designed</li>
-                        <li><span class="status-indicator completed">✅</span>Pilot zone infrastructure development</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Next 6 Months</h4>
-                    <ul>
-                        <li><span class="status-indicator planned">🎯</span>Complete first growing season variety evaluation</li>
-                        <li><span class="status-indicator planned">🎯</span>Launch MVP farm management dashboard</li>
-                        <li><span class="status-indicator planned">🎯</span>Establish core team of 8-10 local workers</li>
-                        <li><span class="status-indicator planned">🎯</span>Document initial technology validation results</li>
-                        <li><span class="status-indicator planned">🎯</span>Develop community training programs</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Next 12-18 Months</h4>
-                    <ul>
-                        <li><span class="status-indicator planned">🎯</span>Expand variety testing to 100+ heirlooms</li>
-                        <li><span class="status-indicator planned">🎯</span>Complete technology integration and testing</li>
-                        <li><span class="status-indicator planned">🎯</span>Establish seed saving and distribution program</li>
-                        <li><span class="status-indicator planned">🎯</span>Launch community certification program</li>
-                        <li><span class="status-indicator planned">🎯</span>Begin replication planning for Phase 2</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 17: Market Opportunity -->
-        <div class="slide">
-            <h2>Market Opportunity</h2>
-            <div class="placeholder">
-                [MARKET SIZE VISUALIZATION: Growing organic/heirloom market trends and AgTech adoption rates]
-            </div>
             <ul>
-                <li><span class="emoji">📈</span><strong>Organic Market:</strong> $50B+ global market growing 8-10% annually</li>
-                <li><span class="emoji">🤖</span><strong>AgTech Sector:</strong> $22B market with 15% CAGR through 2028</li>
-                <li><span class="emoji">🌱</span><strong>Heirloom Demand:</strong> Premium segment growing 20%+ annually</li>
-                <li><span class="emoji">🌍</span><strong>Rural Development:</strong> Billions in development funding targeting rural communities</li>
+                <li><span class="emoji">🌱</span>Scale to 20-30% of total land (0.6-0.8 hectares)</li>
+                <li><span class="emoji">🐔</span>Introduce livestock integration (chickens, bees)</li>
+                <li><span class="emoji">💻</span>Launch full farm management platform</li>
+                <li><span class="emoji">👥</span>Expand worker network to 15-20 people</li>
             </ul>
         </div>
+        <div class="roadmap-phase">
+            <h3>Phase 3: Full Transition & Replication (Years 5-6)</h3>
+            <ul>
+                <li><span class="emoji">🚀</span>100% regenerative farming implementation</li>
+                <li><span class="emoji">🌍</span>License technology to farms globally</li>
+                <li><span class="emoji">🎓</span>Research and education center</li>
+                <li><span class="emoji">🤝</span>Establish franchise model for replication</li>
+            </ul>
+        </div>
+    </div>
 
-        <!-- Slide 18: Key Activities -->
-        <div class="slide">
-            <h2>Key Activities</h2>
-            <div class="two-column">
-                <div>
-                    <h3>Core Operations</h3>
-                    <ul>
-                        <li><span class="emoji">🌱</span><strong>Heirloom variety testing and cultivation</strong></li>
-                        <li><span class="emoji">🔬</span><strong>Technology development and validation</strong></li>
-                        <li><span class="emoji">👥</span><strong>Community training and employment</strong></li>
-                        <li
+    <!-- Slide 8: Business Model Canvas -->
+    <div class="slide">
+        <h2>Business Model Canvas</h2>
+        <h3>Value Propositions</h3>
+        <div class="value-prop-section">
+            <h4>For Conscious Consumers</h4>
+            <ul>
+                <li>Access to rare, flavorful heirloom varieties</li>
+                <li>Complete transparency in growing methods</li>
+                <li>Unique, Instagram-worthy produce with stories</li>
+            </ul>
+        </div>
+        <div class="value-prop-section">
+            <h4>For Technology Customers</h4>
+            <ul>
+                <li>Validated agricultural technology tested in real conditions</li>
+                <li>Integrated hardware and software solutions</li>
+                <li>Community-centered implementation model</li>
+            </ul>
+        </div>
+        <div class="value-prop-section">
+            <h4>For Rural Communities</h4>
+            <ul>
+                <li>Dignified employment opportunities</li>
+                <li>Skills development in modern farming techniques</li>
+                <li>Economic empowerment for women</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 9: Customer Segments & Partnerships -->
+    <div class="slide">
+        <h2>Customer Segments & Key Partnerships</h2>
+        <div class="two-column">
+            <div>
+                <h3>Primary Customers</h3>
+                <ul>
+                    <li><span class="emoji">🛒</span>Eco-conscious consumers seeking unique produce</li>
+                    <li><span class="emoji">🍽️</span>High-end restaurants valuing distinctive ingredients</li>
+                    <li><span class="emoji">🎓</span>Educational institutions promoting agricultural diversity</li>
+                    <li><span class="emoji">🚜</span>Progressive farmers transitioning to sustainable practices</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Strategic Partnerships</h3>
+                <ul>
+                    <li><span class="emoji">🌱</span><strong>Kokopelli:</strong> Seed supply and variety development</li>
+                    <li><span class="emoji">🤝</span>Local agricultural cooperatives</li>
+                    <li><span class="emoji">🔬</span>IoT sensor manufacturers</li>
+                    <li><span class="emoji">👨‍🍳</span>Culinary institutes and chef networks</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 10: Revenue Streams -->
+    <div class="slide">
+        <h2>Revenue Streams</h2>
+        <div class="placeholder">
+            [PIE CHART: Revenue distribution - Farm-Based 60%, Technology-Based 30%, Community-Based 10%]
+        </div>
+        <ul>
+            <li><span class="emoji">🥬</span><strong>Farm-Based Revenue (60%):</strong> Premium heirloom produce sales, value-added products, seeds and seedlings</li>
+            <li><span class="emoji">💻</span><strong>Technology-Based Revenue (30%):</strong> Farm management software subscriptions, hardware sales, consulting services</li>
+            <li><span class="emoji">🤝</span><strong>Community-Based Revenue (10%):</strong> Training and certification programs, franchise/licensing fees</li>
+        </ul>
+    </div>
+
+    <!-- Slide 11: Key Resources & Activities -->
+    <div class="slide">
+        <h2>Key Resources & Activities</h2>
+        <div class="two-column">
+            <div>
+                <h3>Key Resources</h3>
+                <ul>
+                    <li><span class="emoji">🏞️</span><strong>Physical:</strong> 2.8-hectare demonstration farm</li>
+                    <li><span class="emoji">🧠</span><strong>Intellectual:</strong> Proprietary AI algorithms and datasets</li>
+                    <li><span class="emoji">👥</span><strong>Human:</strong> Network of experienced local farm workers</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Key Activities</h3>
+                <ul>
+                    <li><span class="emoji">🌱</span>Heirloom variety testing and cultivation</li>
+                    <li><span class="emoji">🔬</span>Technology development and validation</li>
+                    <li><span class="emoji">🎓</span>Community training and employment</li>
+                    <li><span class="emoji">📊</span>Data collection and analysis</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 12: Social Impact Framework -->
+    <div class="slide">
+        <h2>Social Impact Framework</h2>
+        <div class="placeholder">
+            [IMPACT VISUALIZATION: Circular diagram showing Community, Environment, and Cultural impact areas]
+        </div>
+        <div class="impact-section">
+            <h3>Community Empowerment</h3>
+            <ul>
+                <li><span class="emoji">👩‍🌾</span><strong>Employment Creation:</strong> Providing sustainable work for 10-20 rural women</li>
+                <li><span class="emoji">📚</span><strong>Skills Development:</strong> Training in modern farming techniques and technology</li>
+            </ul>
+        </div>
+        <div class="impact-section">
+            <h3>Environmental Impact</h3>
+            <ul>
+                <li><span class="emoji">🌱</span><strong>Biodiversity Conservation:</strong> Preserving rare and endangered plant varieties</li>
+                <li><span class="emoji">🌍</span><strong>Soil Regeneration:</strong> Implementing practices that restore soil health</li>
+            </ul>
+        </div>
+        <div class="impact-section">
+            <h3>Cultural Impact</h3>
+            <ul>
+                <li><span class="emoji">🏛️</span><strong>Heritage Preservation:</strong> Maintaining connection to agricultural traditions</li>
+                <li><span class="emoji">🍽️</span><strong>Food Culture:</strong> Introducing consumers to forgotten flavors and varieties</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 13: Why This Approach Works -->
+    <div class="slide">
+        <h2>Why This Approach Works</h2>
+        <h3>The Living Laboratory Advantage</h3>
+        <ul>
+            <li><span class="emoji">🔬</span><strong>Real-World Validation:</strong> Technology tested in actual farming conditions</li>
+            <li><span class="emoji">🤝</span><strong>Community Integration:</strong> Solutions developed with and for local communities</li>
+            <li><span class="emoji">🌿</span><strong>Heritage Focus:</strong> Preserving diversity while embracing innovation</li>
+            <li><span class="emoji">📈</span><strong>Scalable Model:</strong> Framework adaptable to different regions and contexts</li>
+        </ul>
+        <h3>Competitive Advantages</h3>
+        <ul>
+            <li><span class="emoji">🎯</span><strong>Unique Positioning:</strong> Combining heritage preservation with technology innovation</li>
+            <li><span class="emoji">👥</span><strong>Community-Centered:</strong> Built on relationships and local knowledge</li>
+            <li><span class="emoji">📊</span><strong>Data-Rich:</strong> Comprehensive dataset from diverse variety testing</li>
+            <li><span class="emoji">🎯</span><strong>Mission-Driven:</strong> Clear social and environmental impact goals</li>
+        </ul>
+    </div>
+
+    <!-- Slide 14: Current Milestones & Next Steps -->
+    <div class="slide">
+        <h2>Current Milestones & Next Steps</h2>
+        <div class="milestone-section">
+            <h3>Completed (Months 1-3)</h3>
+            <ul>
+                <li><span class="status-indicator completed">✅</span>Kokopelli partnership established</li>
+                <li><span class="status-indicator completed">✅</span>Initial variety selection and testing begun</li>
+                <li><span class="status-indicator completed">✅</span>Local worker network development started</li>
+                <li><span class="status-indicator completed">✅</span>Technology architecture designed</li>
+                <li><span class="status-indicator completed">✅</span>Pilot zone infrastructure development</li>
+            </ul>
+        </div>
+        <div class="milestone-section">
+            <h3>Next 6 Months</h3>
+            <ul>
+                <li><span class="status-indicator planned">🎯</span>Complete first growing season variety evaluation</li>
+                <li><span class="status-indicator planned">🎯</span>Launch MVP farm management dashboard</li>
+                <li><span class="status-indicator planned">🎯</span>Establish core team of 8-10 local workers</li>
+                <li><span class="status-indicator planned">🎯</span>Document initial technology validation results</li>
+                <li><span class="status-indicator planned">🎯</span>Develop community training programs</li>
+            </ul>
+        </div>
+        <div class="milestone-section">
+            <h3>Next 12-18 Months</h3>
+            <ul>
+                <li><span class="status-indicator planned">🎯</span>Expand variety testing to 100+ heirlooms</li>
+                <li><span class="status-indicator planned">🎯</span>Complete technology integration and testing</li>
+                <li><span class="status-indicator planned">🎯</span>Establish seed saving and distribution program</li>
+                <li><span class="status-indicator planned">🎯</span>Launch community certification program</li>
+                <li><span class="status-indicator planned">🎯</span>Begin replication planning for Phase 2</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 15: Call to Action -->
+    <div class="slide">
+        <h2>Call to Action</h2>
+        <div class="vision-quote">
+            "Join us in creating a new model for agriculture that:"
+        </div>
+        <ul>
+            <li><span class="emoji">🌱</span><strong>Preserves:</strong> Our agricultural heritage for future generations</li>
+            <li><span class="emoji">💪</span><strong>Empowers:</strong> Rural communities through meaningful work</li>
+            <li><span class="emoji">🤝</span><strong>Demonstrates:</strong> That technology and tradition can work together</li>
+            <li><span class="emoji">🌍</span><strong>Produces:</strong> Extraordinary food while regenerating the land</li>
+        </ul>
+        <p class="subtitle">Let's grow the future while honoring the past.</p>
+    </div>
+
+    <div class="navigation">
+        <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">← Previous</button>
+        <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+    </div><script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function updateSlideCounter() {
+            document.getElementById('slideCounter').textContent = `${currentSlide + 1} / ${totalSlides}`;
+        }
+
+        function updateProgressBar() {
+            const progress = ((currentSlide + 1) / totalSlides) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        }
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            
+            updateSlideCounter();
+            updateProgressBar();
+            
+            // Update navigation buttons
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(direction) {
+            if (direction === 1 && currentSlide < totalSlides - 1) {
+                showSlide(currentSlide + 1);
+            } else if (direction === -1 && currentSlide > 0) {
+                showSlide(currentSlide - 1);
+            }
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                changeSlide(1);
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                changeSlide(-1);
+            }
+        });
+
+        // Initialize
+        updateSlideCounter();
+        updateProgressBar();
+        document.getElementById('prevBtn').disabled = true;
+    </script>
+</body>
+</html>
